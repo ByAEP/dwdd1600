@@ -1,0 +1,159 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: #FDFBF7;
+}
+
+/* header */
+header {
+    background-color: #d9d9d9;
+    padding: 1.5rem 20px; 
+    text-align: left;    
+}
+
+header span {
+    color: #8c5a63;
+    font-size: 1.8rem;
+    font-weight: 700; 
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* nav section */
+nav {
+    background-color: #d9c1c5;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+nav a {
+    display: block;          
+    padding: 1rem 1.5rem;   
+    text-decoration: none;  
+    font-size: 1.1rem;
+    color: #8c5a63;         
+    font-weight: 700;
+}
+
+nav li.active a {
+    background-color: #8c5a63;
+    color: #d9c1c5;        
+}
+
+nav li a:hover {
+    background-color: #8c5a63;
+    color: #d9c1c5;
+}
+
+/* main */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+
+main h1 {
+    color: #402e2e;
+    font-size: 2.2rem; 
+}
+
+main h2 {
+    color: #8c5a63;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+main p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.2rem;
+}
+
+/* li styles */
+main ol {
+    padding: 1rem 40px;
+    background-color: #f2f2f2;
+    margin-bottom: 1.5rem;
+}
+
+main ul {
+    list-style-type: circle;
+    padding-left: 25px;
+}
+
+main ul li {
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    font-weight: 300; 
+}
+
+main dl dt {
+    color: #402e2e;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+main dl dd {
+    color: #8c5a63;
+    margin-left: 20px;
+    font-style: italic;
+}
+
+/* footer area*/
+main address {
+    font-style: normal;
+    background-color: #d9c1c5;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #8c5a63; 
+    width: 250px;
+    margin: 2rem 0;
+}
+/*main image starts here */
+figure.gallery {
+    margin: 0 0 0 10px;
+    width: 40%;
+    float: right;
+}
+figure.gallery img{
+    width: 100%;
+    height: auto;
+}
+figure.gallery figcaption{
+    text-align: center;
+    font-size: 12px ;
+}
+/*galeria starts here */
+div.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+}
+div.galeria figure {
+    margin: 0 ;
+}
+div.galeria figcaption{
+    text-align: center;
+    font-size: .8rem;
+    color: #8c5a63;
+} 
+/*footer starts here */
+footer {
+    
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.source-text {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 1rem;
+    display: block;
+}

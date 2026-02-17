@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore the deep history of Mexican jewelry, from ancient Mixtec masters to modern Guadalajara craftsmanship.">
+    <meta name="author" content="Ana Pinto">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Stela Marea: Jewelry History</title>
+</head>
+<body>
+    <header>
+        <span>Stela Marea</span>
+    </header>
+<!--navigation starts -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Jewelry History</a></li>
+            <li  class="active"><a href="appointment.html">Appointment Request</a></li>
+            
+         </ul>
+    </nav>
+
+    <!--main page starts-->
+    <main>
+        <h1>Appointment Request</h1>
+        <br> Set a time to make your dream jewelry with an expert by your side!<br>
+        <form method="get" class="setApp" action="thanks.html">
+    <fieldset>
+        <legend> Cutomer Information</legend>
+        <label>First Name* <input type="text" name="fname" required></label>
+        <label>Last Name* <input  type="text" name="lname" required></label>
+        <label>Phone Number* <input type="tel" name="phone" required placeholder="000-000-0000"></label>
+        <label>Email Address* <input type="email" name="email" required ></label>
+</fieldset>
+
+<fieldset>
+    <legend>Schedule your Appointment</legend>
+    <br> Select what we will be helping you with<br>
+    <label><input type="radio" name="booking" value="engagement"> Engagement Ring 60 Minutes <br>
+    Set up an appointment to meet with a jewelry consultant to ask and view engagement rings, diamonds and more!</label>
+      <label><input type="radio" name="booking" value="wedding"> Wedding Band 60 Minutes <br>
+    Set up an appointment to meet with a jewelry consultant to ask and view wedding rings!</label>
+      <label><input type="radio" name="booking" value="fine jewelry"> Work with one of our jewelry consultants to find the perfect gift. </label>
+</fieldset>
+
+<fieldset>
+<legend>Pick Your Date</legend>
+<label ><input type="checkbox" name="monday" value="chosen"> Monday </label>
+<label ><input type="checkbox" name="tuesday" value="chosen"> Tuesday </label>
+<label ><input type="checkbox" name="wednesday" value="chosen"> Wednesday </label>
+<label ><input type="checkbox" name="thursday" value="chosen"> Thursday </label>
+<label ><input type="checkbox" name="friday" value="chosen"> Friday </label>
+<label ><input type="checkbox" name="saturday" value="chosen"> Saturday </label>
+<label ><input type="checkbox" name="sunday" value="chosen"> Sunday </label>
+
+<label>Preffered Time
+<select name="time" >
+<option value="none">Select Time</option>
+<option value="morning">10:00am and 11:00am</option>
+<option value="noon">11:00am and 12:00pm</option>
+<option value="afternoon"> 12:00pm and 1:00pm</option>
+<option value="evening1">1:00pm and 2:00pm</option>
+<option value="evening2"> 2:00pm and 3:00pm</option>
+<option value="evening3">3:00pm and 4:00pm</option>
+<option value="evening4"> 4:00pm and 5:00pm</option>
+</select>
+</label>
+</fieldset>
+
+<label> Comments
+
+    <textarea name="comments"></textarea>
+</label>
+
+        <input type="submit" value="Schedule Appointment">
+        </form>
+
+        
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 &bull; Ana Pinto &bull; Web Essentials</p>
+        <span class="source-text">Source: Stela Marea Jewelry History & The MET Museum</span>
+    </footer>
+</body>
+</html>

@@ -1,184 +1,113 @@
-/* Prevent Problems on Different Browsers */
+
 * { box-sizing: border-box; }
 
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     margin: 0;
-    font-size: 16px;  
+    font-size: 16px;
+    background-color: #FDFBF7; }
+
+
+header, nav, main, footer {
+    max-width: 64rem;
+    margin: 0 auto;
 }
 
-/* Header - Side-by-side logo and text */
+/* --- header --- */
 header {
-    padding: 1rem 2vw;
+    padding: 1.5rem 20px;
+    text-align: left;
 }
 
 header span {
-    margin: 0;
     color: #8c5a63;
     font-size: 2rem;
-    font-weight: 700; 
-    }
-header p{
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* --- navigation --- */
+nav ul {
     margin: 0;
-    color: #402e2e;
-    font-size: 1.22rem;
-    letter-spacing: 2px;
-}
-
-/* SMALL SCREEN NAVIGATION */
-@media only screen and (max-width: 600px) {
-    nav ul { 
-        margin: 0;
-        padding: 0;
-     }
-
-    nav a {
-        display: block;
-        text-align: center;
-        padding: .8rem;
-        color: #402e2e;
-        text-decoration: none;
-        border-bottom: solid 1px #eee;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-    nav .active a {
-        background-color: #8c5a63;
-        color: white;
-        background-image: linear-gradient(to bottom, #8c5a63,#402e2e );
-    }
-}
-
-/* LARGE SCREEN NAVIGATION */
-@media only screen and (min-width: 601px) {
-    nav { 
-        border-top: solid 1px #d9c1c5; 
-    }
-    nav ul{
-        margin: 0;          
-        padding: 0 2vw; 
-        list-style-type: none;
-        display: flex;
-    }
-    nav a {
-        display: block;
-        padding: 1.2rem 1rem .3rem 1rem;
-        font-size: 1rem;
-        text-decoration: none;
-        color: #8c5a63;
-        font-weight: 600;
-        text-transform: uppercase;
-        text-align: center;
-        border-bottom: solid 2px #fff;
-    }
-
-nav .active a {
-    border-bottom: solid 2px #8c5a63;
-}
-    nav a:hover { 
-        color: #000; }
-}
-
-/* Main Content */
-main { 
-    padding: 1rem 2vw;
- }
-
-main h1 {
-    color: #402e2e;
-    font-size: 2.5rem;
-    margin:  .5rem 0 .8rem 0; 
-    font-weight: 200;
-}
-
-main h2 {
-    color: #8c5a63;
-    margin-bottom: .2rem;
-}
-
-main p {
-    color: #666;
-    margin: 0 0 .8rem 0;
-    line-height: 150%;
-    font-size: 1.2rem;
-}
-main a {
-    color: chocolate;
-}
- .hero{
-    width: 100%;
-    height: auto;
- }
-
-.fineJewelry {
+    padding: 0;
+    list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
-}
-.fineJewelry section {
-    flex-basis: 50%;
-    margin: 1rem 0;
-}
-.fineJewelry span {
-display: block;
-text-align: center;
-font-weight: 700;
-color: #402e2e;
+    /* This ensures all menu items share the space equally */
+    width: 100%; 
 }
 
-.fineJewelry img{
-    width: 98%;
-    height: auto;
-    border-radius: 5px;
+nav li {
+    
+    flex: 1; 
 }
 
-.fineJewelry img:hover {
-    box-shadow: 0px 0px 10px rgba(140, 90, 99, 0.5)
+nav a {
+    display: block;
+    padding: 1rem 0.5rem;  
+    text-decoration: none;
+    color: #8c5a63;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center; 
+    transition: 0.3s;
 }
 
 
-/* activities stuff here*/
-table.activities{
+nav .active a, nav a:hover {
+    background-color: #8c5a63;
+    color: white; 
+}
+
+/* --- main --- */
+main {
+    padding: 2rem 20px;
+}
+
+main h1 { color: #402e2e; font-size: 2.5rem; font-weight: 200; }
+main h2 { color: #8c5a63; margin-top: 2rem; }
+main p { line-height: 1.6; color: #333; font-size: 1.1rem; }
+main a { color: chocolate; }
+
+.hero { width: 100%; height: auto; margin-bottom: 2rem; }
+
+/* --- fine jewelery  --- */
+.fineJewelry { display: flex; flex-wrap: wrap; gap: 20px; }
+.fineJewelry section { flex-basis: calc(50% - 10px); }
+.fineJewelry img { width: 100%; border-radius: 5px; transition: 0.3s; }
+.fineJewelry img:hover { box-shadow: 0px 0px 10px rgba(140, 90, 99, 0.5); }
+
+/* --- Activities  --- */
+table.activities { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+table.activities th { background-color: #402e2e; color: white; padding: 10px; text-align: left; }
+table.activities td { color: #8c5a63; padding: 10px; border-bottom: 1px solid #eee; }
+table.activities tr:nth-child(odd) { background-color: rgba(0,0,0,0.02); }
+
+/* ---  Appointment form --- */
+.setApp fieldset { border: 1px solid #8c5a63; border-radius: 5px; padding: 20px; }
+.setApp label { display: block; margin-top: 1rem; font-weight: 700; color: #402e2e; }
+.setApp input, .setApp select, .setApp textarea {
     width: 100%;
-    border-collapse: collapse;
+    max-width: 400px;
+    padding: 8px;
+    border: 1px solid #8c5a63;
+    border-radius: 4px;
+}
+.setApp [type=submit] {
+    background-color: #8c5a63;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
 }
 
-table.activities th {
-background-color: #402e2e;
-color:white;
-padding: .6rem 2%;
-text-align: left;
-}
-
-table.activities td {
-color:#8c5a63;
-padding: .4rem 2%;
-}
-
-table.activities tr:nth-child(odd) {
-    background-color: #eee;
-
-}
-table.activities tr:hover {
-    background-color: #d9c1c5;
-}
-
-
-/*footer stuff here */
-
+/* --- Footer --- */
 footer {
     border-top: solid #402e2e 1px;
     text-align: center;
+    padding: 2rem 0;
     color: #8c5a63;
-    font-size: .8rem;
-    padding: 1rem 0;
-    clear: both;
-}
-footer a{
-    color: #8c5a63;
-}
-
-header, nav, main, footer{
- max-width: 64rem;  
- margin: 0 auto; 
 }
